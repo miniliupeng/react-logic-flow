@@ -1,0 +1,42 @@
+.node-panel {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 250px;
+  padding: 16px;
+  background-color: white;
+  // box-shadow: 0 0 10px 1px rgb(228, 224, 219);
+  border: 1px solid #e4e0db;
+  border-radius: 6px;
+  .node-title {
+    display: inline-flex;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  :global {
+    .ant-tree-treenode {
+      width: 100%;
+    }
+    .ant-tree-node-content-wrapper {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      cursor: default;
+      min-width: 0;
+      .ant-tree-title {
+        min-width: 0;
+        flex: 1;
+      }
+      &:has(.ant-tree-iconEle:not(:empty)) {
+        cursor: pointer;
+        &:hover {
+          background-color: #d2dec8;
+        }
+      }
+    }
+  }
+}
